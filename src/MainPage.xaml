@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:page="clr-namespace:DataTypeInBindingExtension"
              x:Class="DataTypeInBindingExtension.MainPage"
              x:Name="Page">
 
@@ -26,7 +27,7 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
             <Button
-                Text="{Binding BtnText, Source={x:Reference Page}}" 
+                Text="{Binding BtnText, Source={x:Reference Page}, x:DataType={x:Type page:MainPage}}" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
